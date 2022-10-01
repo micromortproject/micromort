@@ -1,938 +1,268 @@
-<!DOCTYPE html>
-
-
-
-
-<html lang="en">
-
-
-
-
-
-
-
-
-
-<head>
-
-
-
-
-  <meta charset="UTF-8">
-
-
-
-
-  <title>Micromort – Where there is no place for Coronavirus</title>
-
-
-
-
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
-
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
-
-
-
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
-
-
-
-
-  <link rel="stylesheet" href="./style.css">
-
-
-
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-
-
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
-
-
-
-
-  <script src='https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js'></script>
-
-
-
-
-  <script src='https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js'></script>
-
-
-
-
-  <script src='https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js'></script>
-
-
-
-
-  <script src='https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi-filters.min.js'></script>
-
-
-
-
-  <script src='https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js'></script>
-
-
-
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLCBF6WTSF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-RLCBF6WTSF');
-  </script>
-
-
-
-
-</head>
-
-
-
-
-
-<style>
-  @media only screen and (max-width: 1000px) {
-
-    .desktopT {
-      display: none;
-    }
-
-    body {
-      background-image: url(ccvirus.png);
-      background-size: 100vh;
-      font-family: Px Grotesk Regular;
-      background-repeat: no-repeat;
-    }
-
-
-  }
-</style>
-
-
-
-<body style="max-height:100vh">
-
-
-  <div class="menudesktop">
-    <div class="wrapper" id="top">
-      <div class="fixed-wrapper">
-        <div class="fixed_menu">
-
-          <!-- Menù desktop orizzontale -->
-          <div>
-            <a href="index.html"><img src="images2/logo.png" class="logo"></a>
-          </div>
-          <ul>
-            <li><a href="../about.html">ABOUT</a></li>
-            <li><a href="index.html">COVID-19</a></li>
-            <li><a href="../tradingdeath.html" style="color:rgb(240, 48, 104)">TRADING DEATH</a></li>
-            <li><a href="../getstarted.html">GET STARTED</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="menumobile">
-    <div class="wrapper" id="top">
-      <div class="fixed-wrapper">
-        <div class="fixed_menu">
-          <button id="burger" class="open-main-nav">
-            <span class="burger"></span>
-          </button>
-          <nav class="main-nav" id="main-nav">
-            <ul>
-              <li><a href="../index.html">HOME</a></li>
-              <li><a href=".../getstarted.html">GET STARTED</a></li>
-              <li><a href="../tradingdeath.html">TRADING DEATH</a></li>
-              <li><a href="index.html">COVID-19</a></li>
-              <li><a href="../about.html">ABOUT</a></li>
-              <li>
-                <a href="https://twitter.com/micromort_org" target="_blank" style="font-size: 30px; padding-right: 8px; display: inline">
-                  <i class="fab fa-twitter-square"></i>
-                </a>
-                <a href="https://www.instagram.com/micromort_org/" target="_blank" style="font-size: 30px;display: inline">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div>
-            <a href="index.html"><img src="images2/logo.png" class="logo"></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-  <!-- Script menu mobile -->
-
-  <script>
-    let burger = document.getElementById('burger'),
-      nav = document.getElementById('main-nav');
-    burger.addEventListener('click', function(e) {
-      this.classList.toggle('is-open');
-      nav.classList.toggle('is-open');
-    });
-    let clickEvent = new Event('click');
-  </script>
-
-
-
-
-
-
-  <div class="desktopT">
-
-
-    <a href="#pop-up-one"><img src="info.png" style="float:left; display:inline-block; margin-left:90vw; width:2.5%;" class="info">
-
-    </a>
-
-
-
-    <div id="pop-up-one" class="pop-up-overlay">
-
-      <div class="pop-up">
-
-        <h1 style="color:#f03068; font-size:39px;">Micromort and Covid-19</h1>
-
-        <a class="close" href="#">&times;</a>
-
-        <p style="width: 62%; font-size: 1.4vw; line-height:1.68vw; margin-left: 20%;">In Italy, as in other Western nations, people thought they were living the worst global tragedy of the century.
-
-          Of course, the military tanks that took the coffins out of Bergamo squeezed the hearts of the whole world, as did
-
-          the mass graves made at the main cemetery in New York. The air and atmosphere was of war, fear, hunger, poverty, practically
-
-          everywhere. <br><br> The West is privileged in that it is far removed from war-torn realities where counting hundreds of victims a day is considered 'normal'.
-
-          In such countries, the pandemic is nothing more than a problem added to many others.
-
-          In these realities, the economy was already destroyed long before the coronavirus arrived and the price of death is close to zero.<br><br>
-
-          For this reason, Micromort did not initially set out to calculate the price of death again following the pandemic,
-
-          but preferred to compare it with the symbols of Covid-19.
-
-          Surgical masks, gloves, sanitizers, swabs, water and soap are just some of the symbolic elements of 2020: each of them
-
-          has become indispensable to protect oneself from the coronavirus, but on the other hand, each of them also has a price - more or
-
-          less high - which varies from nation to nation.
-
-          In Italy, for example, surgical masks are priced at €0.60. The price of the Italian Micromort is currently € 42.65. Thus, death,
-
-          and with it life, is worth 71 times a surgical mask in Italy.<br><br>
-
-          <b>But is this difference always so great in unfortunate countries?</b>
-
-        </p>
-      </div>
-    </div>
-    <div class="titolo">
-      where there is no place <br>for Coronavirus
-    </div>
-
-    <main role="main" class="wrapper">
-      <div class="content">
-        <div id="rgbKineticSlider" class="rgbKineticSlider" style="position: fixed; top:0; right:0; height:100vh;width:100vw; transform:translate(50%,50%)">
-        </div>
-      </div>
-    </main>
-
-    <div class="wrapper" style="transform:translateY(-100%)">
-
-
-
-
-
-
-
-
-
-
-      <div class="content">
-
-        <div class="bg-shape">
-
-        </div>
-
-        <div class="product-img">
-
-          <div class="product-img__item" id="img1">
-
-            <img src="EstensioneCoronavirus2.png" alt="star wars" class="product-img__img">
-
-          </div>
-
-
-
-
-
-
-
-
-
-          <div class="product-img__item" id="img2">
-
-
-
-
-            <img src="EstensioneCoronavirus_3.png" style="width: 24vw;" alt="star wars" class="product-img__img">
-
-
-
-
-          </div>
-
-
-
-
-
-
-
-
-
-          <div class="product-img__item" id="img3">
-
-
-
-
-            <img src="EstensioneCoronavirus1.png" alt="star wars" class="product-img__img">
-
-
-
-
-          </div>
-
-
-
-
-
-
-
-
-
-          <div class="product-img__item" id="img4">
-
-
-
-
-            <img src="EstensioneCoronavirus1.png" alt="star wars" class="product-img__img">
-
-
-
-
-          </div>
-
-
-
-
-
-
-
-
-
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-        <div class="product-slider">
-
-
-
-
-          <button class="main-nav prev disabled" data-nav="previous">
-
-
-
-
-            <span class="icon">
-
-
-
-
-              <svg class="icon icon-arrow-right">
-
-
-
-
-                <use xlink:href="#icon-arrow-left"></use>
-
-
-
-
-              </svg>
-
-
-
-
-            </span>
-
-
-
-
-          </button>
-
-
-
-
-          <button class="main-nav next" data-nav="next">
-
-
-
-
-            <span class="icon">
-
-
-
-
-              <svg class="icon icon-arrow-right">
-
-
-
-
-                <use xlink:href="#icon-arrow-right"></use>
-
-
-
-
-              </svg>
-
-
-
-
-            </span>
-
-
-
-
-          </button>
-
-
-
-
-
-
-
-
-
-          <div class="product-slider__wrp swiper-wrapper">
-
-
-
-
-            <div class="product-slider__item swiper-slide" data-target="img4">
-
-
-
-
-              <div class="product-slider__card">
-
-
-
-
-                <div class="product-slider__content">
-
-
-
-
-                  <h1 class="product-slider__title">
-
-
-
-
-                    SYRIA
-
-
-
-
-                  </h1>
-
-
-
-
-                  <br>
-
-
-
-
-                  <span class="product-slider__tit">PRICE OF A SURGICAL FACE MASK</span>
-
-
-
-
-                  <span class="product-slider__price">0,52 €</span>
-
-
-
-
-                  <br><br>
-
-
-
-
-                  <span class="product-slider__tit">PRICE OF DEATH</span>
-
-
-
-
-                  <span class="product-slider__price">0,30 €</span>
-
-
-
-
-                  <br>
-
-
-
-
-                  <!-- <hr> -->
-
-
-
-
-                  <div class="product-ctr">
-
-
-
-
-
-
-
-
-
-
-                  </div>
-
-
-
-
-
-
-
-
-
-
-                </div>
-
-
-
-
-              </div>
-
-
-
-
-            </div>
-
-
-
-
-
-
-
-
-
-            <div class="product-slider__item swiper-slide" data-target="img1">
-
-
-
-
-              <div class="product-slider__card">
-
-
-
-
-                <div class="product-slider__content">
-
-
-
-
-                  <h1 class="product-slider__title">
-
-
-
-
-                    LYBIA
-
-
-
-
-                  </h1>
-
-
-
-
-                  <br>
-
-
-
-
-                  <span class="product-slider__tit">PRICE OF A PAIR OF LATEX GLOVES</span>
-
-
-
-
-                  <span class="product-slider__price">2,85 €</span>
-
-
-
-
-                  <br><br>
-
-
-
-
-                  <span class="product-slider__tit">PRICE OF DEATH</span>
-
-
-
-
-                  <span class="product-slider__price">5,58 €</span>
-
-
-
-
-                  <br>
-
-
-
-
-                  <!-- <hr> -->
-
-
-
-
-                  <div class="product-ctr">
-
-
-
-
-
-
-
-
-
-                  </div>
-
-
-
-
-
-
-
-
-
-                </div>
-
-
-
-
-              </div>
-
-
-
-
-            </div>
-
-
-
-
-
-
-
-
-
-            <div class="product-slider__item swiper-slide" data-target="img2">
-
-
-
-
-              <div class="product-slider__card">
-
-
-
-
-                <div class="product-slider__content">
-
-
-
-
-                  <h1 class="product-slider__title">
-
-
-
-
-                    INDIA
-
-
-
-
-                  </h1>
-
-
-
-
-                  <br>
-
-
-
-
-                  <span class="product-slider__tit">PRICE OF A CORONAVIRUS TEST (IN PRIVATE LAB)</span>
-
-
-
-
-                  <span class="product-slider__price">52,20 €</span>
-
-
-
-
-                  <br><br>
-
-
-
-
-                  <span class="product-slider__tit">PRICE OF DEATH</span>
-
-
-
-
-                  <span class="product-slider__price">2,43 €</span>
-
-
-
-
-                  <br>
-
-
-
-
-                  <!-- <hr> -->
-
-
-
-
-                  <div class="product-ctr">
-
-
-
-
-
-
-
-
-
-                  </div>
-
-
-
-
-
-
-
-
-
-                </div>
-
-
-
-
-              </div>
-
-
-
-
-            </div>
-
-
-
-
-
-
-
-
-
-
-          </div>
-
-
-
-
-        </div>
-
-
-
-
-
-
-
-
-
-      </div>
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-  </div>
-
-
-
-
-
-
-
-
-  <svg class="hidden" hidden>
-
-
-
-
-    <symbol id="icon-arrow-left" viewBox="0 0 240.823 240.823">
-
-
-
-
-      <path d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-
-
-
-
-  		l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-
-
-
-
-  		C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-
-
-
-
-    </symbol>
-
-
-
-
-    <symbol id="icon-arrow-right" viewBox="0 0 240.823 240.823">
-
-
-
-
-      <path d="M183.189,111.816L74.892,3.555c-4.752-4.74-12.451-4.74-17.215,0c-4.752,4.74-4.752,12.439,0,17.179
-
-
-
-
-  		l99.707,99.671l-99.695,99.671c-4.752,4.74-4.752,12.439,0,17.191c4.752,4.74,12.463,4.74,17.215,0l108.297-108.261
-
-
-
-
-  		C187.881,124.315,187.881,116.495,183.189,111.816z"></path>
-
-
-
-
-    </symbol>
-
-
-
-
-  </svg>
-
-
-
-
-  <!-- partial -->
-
-
-
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-
-
-
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
-
-
-
-
-  <script src="./script.js"></script>
-
-
-
-
-
-
-
-  </div>
-  </div>
-
-
-
-
-
-  <div class="mobileT">
-
-    <div class="ccVV" style="margin-top: -20vh; color: #f03068; font-size:30px; width: 70vw; margin-left:5vw;">
-
-
-      See the entire campaing on your desktop for a better experience!
-
-
-    </div>
-
-
-
-  </div>
-
-</body>
-
-
-
-
-
-
-
-
-
-</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Micromort – Where there is no place for Coronavirus</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+  <link rel="stylesheet" href="./style.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi-filters.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js'></script>
+
+</head>
+
+<body style="max-height:100vh">
+
+  <div class="desktopT">
+
+  <div class="titolo">
+    where there is no place <br>for Coronavirus
+  </div>
+
+  <main role="main" class="wrapper">
+    <div class="content">
+      <div id="rgbKineticSlider" class="rgbKineticSlider" style="position: fixed; top:0; right:0; height:100vh;width:100vw; transform:translate(50%,50%)">
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <div class="wrapper" style="transform:translateY(-100%)">
+
+
+
+    <div class="menudesktop">
+      <div class="wrapper" id="top">
+        <div class="fixed-wrapper">
+          <div class="fixed_menu">
+            <!-- Menù desktop orizzontale -->
+            <ul>
+
+              <li><a href="../comingsoon.html"><font style="opacity:0.0">__</font>ABOUT<font style="opacity:0.0">___</font></a></li>
+              <li><a href="index.html" style="color:rgb(240, 48, 104)"><font style="opacity:0.0">__</font>COVID-19<font style="opacity:0.0">___</font></a></li>
+              <li><a href="../comingsoon.html"><font style="opacity:0.0">__</font>TRADING DEATH<font style="opacity:0.0">___</font></a></li>
+              <li><a href="../globe/index.html"><font style="opacity:0.0">____</font>GET STARTED<font style="opacity:0.0">__</font></a></li>
+
+            </ul>
+
+            <div>
+              <a href="../index.html"><img src="logo.png" class="logo"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="bg-shape">
+      </div>
+
+      <div class="product-img">
+
+        <div class="product-img__item" id="img1">
+          <img src="EstensioneCoronavirus2.png" alt="star wars" class="product-img__img">
+        </div>
+
+        <div class="product-img__item" id="img2">
+          <img src="EstensioneCoronavirus_3.png" style="width: 24vw;" alt="star wars" class="product-img__img">
+        </div>
+
+        <div class="product-img__item" id="img3">
+          <img src="EstensioneCoronavirus1.png" alt="star wars" class="product-img__img">
+        </div>
+
+        <div class="product-img__item" id="img4">
+          <img src="EstensioneCoronavirus1.png" alt="star wars" class="product-img__img">
+        </div>
+
+
+
+
+      </div>
+
+
+
+      <div class="product-slider">
+        <button class="main-nav prev disabled" data-nav="previous">
+          <span class="icon">
+            <svg class="icon icon-arrow-right">
+              <use xlink:href="#icon-arrow-left"></use>
+            </svg>
+          </span>
+        </button>
+        <button  class="main-nav next" data-nav="next">
+          <span class="icon">
+            <svg class="icon icon-arrow-right">
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg>
+          </span>
+        </button>
+
+        <div class="product-slider__wrp swiper-wrapper">
+          <div class="product-slider__item swiper-slide" data-target="img4">
+            <div class="product-slider__card">
+              <div class="product-slider__content">
+                <h1 class="product-slider__title">
+                  SYRIA
+                </h1>
+                <br>
+                <span class="product-slider__tit">PRICE OF A SURGICAL FACE MASK</span>
+                <span class="product-slider__price">0,52 €</span>
+                <br><br>
+                <span class="product-slider__tit">PRICE OF DEATH</span>
+                <span class="product-slider__price">0,30 €</span>
+                <br>
+                <!-- <hr> -->
+                <div class="product-ctr">
+
+
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+          <div class="product-slider__item swiper-slide" data-target="img1">
+            <div class="product-slider__card">
+              <div class="product-slider__content">
+                <h1 class="product-slider__title">
+                  LYBIA
+                </h1>
+                <br>
+                <span class="product-slider__tit">PRICE OF A PAIR OF LATEX GLOVES</span>
+                <span class="product-slider__price">2,85 €</span>
+                <br><br>
+                <span class="product-slider__tit">PRICE OF DEATH</span>
+                <span class="product-slider__price">5,58 €</span>
+                <br>
+                <!-- <hr> -->
+                <div class="product-ctr">
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="product-slider__item swiper-slide" data-target="img2">
+            <div class="product-slider__card">
+              <div class="product-slider__content">
+                <h1 class="product-slider__title">
+                  INDIA
+                </h1>
+                <br>
+                <span class="product-slider__tit">PRICE OF A CORONAVIRUS TEST (IN PRIVATE LAB)</span>
+                <span class="product-slider__price">52,20 €</span>
+                <br><br>
+                <span class="product-slider__tit">PRICE OF DEATH</span>
+                <span class="product-slider__price">2,43 €</span>
+                <br>
+                <!-- <hr> -->
+                <div class="product-ctr">
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+  <svg class="hidden" hidden>
+    <symbol id="icon-arrow-left" viewBox="0 0 240.823 240.823">
+      <path d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
+  		l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
+  		C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 240.823 240.823">
+      <path d="M183.189,111.816L74.892,3.555c-4.752-4.74-12.451-4.74-17.215,0c-4.752,4.74-4.752,12.439,0,17.179
+  		l99.707,99.671l-99.695,99.671c-4.752,4.74-4.752,12.439,0,17.191c4.752,4.74,12.463,4.74,17.215,0l108.297-108.261
+  		C187.881,124.315,187.881,116.495,183.189,111.816z"></path>
+    </symbol>
+  </svg>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+  <script src="./script.js"></script>
+
+</div>
+
+<div class="mobileT">
+  <div class="menumobile">
+    <div class="wrapper" id="top">
+      <div class="fixed-wrapper">
+        <div class="fixed_menu">
+          <button id="burger" class="open-main-nav">
+            <span class="burger"></span>
+          </button>
+          <nav class="main-nav" id="main-nav">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="comingsoon.html">TRADING DEATH</a></li>
+              <li><a href="coronavirus/index.html">COVID-19</a></li>
+              <li><a href="comingsoon.html">ABOUT</a></li>
+              <li>
+                <a href="https://twitter.com/micromort_org" target="_blank" style="font-size: 30px; padding-right: 8px; display: inline"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/micromort_org/" target="_blank" style="font-size: 30px;display: inline"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <a href="index.html"><img src="logo.png" class="logo" style="margin-top:3vh" ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ccVV" style="margin-top: -20vh; color: #f03068; font-size:30px; width: 70vw; margin-left:5vw;" >
+    See the entire campaing on your desktop for a better experience!
+  </div>
+
+  <script>
+  let burger = document.getElementById('burger'),
+
+    nav = document.getElementById('main-nav');
+
+  burger.addEventListener('click', function(e) {
+
+    this.classList.toggle('is-open');
+
+    nav.classList.toggle('is-open');
+
+  });
+
+  let clickEvent = new Event('click');
+  </script>
+
+  <style>
+    body {
+      background-image: url(ccvirus.png);
+      background-size:  100vh;
+font-family: Px Grotesk Regular;
+      background-repeat: no-repeat;
+    }
+  </style>
+</div>
+
+</body>
+
+</html>
