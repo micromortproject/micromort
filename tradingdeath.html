@@ -1,15 +1,6 @@
 <!DOCTYPE html>
-
-
-
 <html lang="en" dir="ltr">
-
-
-
 <head>
-
-
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/style.css">
@@ -20,17 +11,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <title>Micromort | Trading death</title>
-
-
-
   <meta name="description" content="Official account of the only existing death-based currency. Trading death has never been so convenient. Start now">
   <meta name="keywords" content="speculative design, interaction design, experience design, currency, death">
   <meta name="author" content="Alvise Aspesi, Carlotta Bacchini, Elisa Carbone, Pietro Forino, Davide Peruchini, Enzo Fung Taboada">
-
-
-
-
-
 
 
   <script>
@@ -96,92 +79,6 @@
 <body style="background-repeat: repeat; background-size: contain;opacity:30;">
 
 
-  <!-- Inizio cookie -->
-  <div class="cookie-disclaimer">
-    <div class="container_cookie">
-      <button type="button" class="accetta accept-cookie" style="right: 14%;" id="scompare">Accept</button>
-      <button type="button" class="declina decline-cookie" style="right: 8%;" id="deleting">Decline</button>
-      <p class="cookie_testo">Micromort uses cookies to provide features on our sites and applications to improve your online experience. See our <a href="policy.html" style="color:#031109; margin: 0%;">Privacy Policy</a> for more information about
-        cookies. By continuing to use our sites and applications, you agree to our use of cookies.</p>
-    </div>
-  </div>
-
-  <script>
-    jQuery(document).ready(function() {
-      var cookie = false;
-      var cookieContent = $('.cookie-disclaimer');
-
-      checkCookie();
-
-      var controllaCookie = sessionStorage.getItem('cookie');
-      if (controllaCookie == 'true') {
-        cookieContent.hide();
-      }
-
-      function setCookie(cname, cvalue, exdays) {
-        var d = new Date();
-        var expires = "expires=" + d.toGMTString();
-        document.cookie = cname + "=" + cvalue + "; " + expires;
-
-      }
-
-      function getCookie(cname) {
-        var name = cname + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-          var c = ca[i].trim();
-          if (c.indexOf(name) === 0) return c.substring(name.length, c.length);
-        }
-
-        return "";
-      }
-
-      function checkCookie() {
-        var user = getCookie("username");
-        if (user !== "") {
-          cookie = true;
-        } else {
-
-          if (user !== "" && user !== null) {
-            setCookie("cvalue", "cvalue", 365);
-          }
-        }
-      }
-
-      function deleteCookie() {
-
-        setCookie('cname', '', -1);
-      }
-
-      $('.accept-cookie').click(function() {
-        setCookie("cname", "cvalue", 365);
-        cookieContent.hide();
-        sessionStorage.setItem('controllaCookie', true);
-
-      });
-      //delete cookie on click
-
-      $('.decline-cookie').click(function() {
-        deleteCookie();
-        document.getElementById('deleting').innerHTML = "deleting cookies..."
-        sessionStorage.setItem('controllaCookie', false);
-        document.getElementById('scompare').style.display = 'none'
-        setTimeout(
-          function()
-
-          {
-
-            document.getElementById('deleting').innerHTML = "cookies deleted"
-          }, 3000);
-        setTimeout(
-          function() {
-            cookieContent.hide();
-          }, 4000);
-      });
-
-    });
-  </script>
-  <!-- fine cookie -->
 
   <div class="menudesktop">
 		<div class="wrapper" id="top">
@@ -427,7 +324,7 @@
       <td class="foot" style="width: 20vw; padding-left: 100px;">
 
         <h2 style="border-bottom:1px solid #f03068; margin-top: 31px; width: 110%; margin-top: 20px; font-size: 20px; text-align:left; ">Stay in touch</h2>
-        <p style="font-family: 'Px Grotesk Light'"><a class="mail" href="mailto:info@micromort.org">info@micromort.org</a></p>
+        <p style="font-family: 'Px Grotesk Light'"><a class="mail" href="mailto:info@pietroforino.com">mail</a></p>
 
 
         <ul style="text-align:left">
@@ -552,7 +449,7 @@ $(window).scroll(function () {
       <li><a href="coronavirus/index.html">covid-19</a></li>
       <li><a href="about.html">about</a></li>
       <h2 style="border-bottom:1px solid #f03068; margin-top: 31px;">Stay in touch</h2>
-      <p style="font-family: 'Px Grotesk Light'; padding-left: 0px;"><a class="mail" href="mailto:info@micromort.org">info@micromort.org</a></p>
+      <p style="font-family: 'Px Grotesk Light'; padding-left: 0px;"><a class="mail" href="mailto:info@pietroforino.com">mail</a></p>
       <ul style="margin-bottom:15%;">
         <li>
           <a href="https://twitter.com/micromort_org" target="_blank" style="font-size: 25px; padding-right: 2px; display: inline"><i class="fab fa-twitter-square"></i></a>
